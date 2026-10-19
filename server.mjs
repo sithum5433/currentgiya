@@ -1,4 +1,7 @@
 import http from 'node:http';
+if (process.loadEnvFile) {
+  try { process.loadEnvFile('.env'); } catch {}
+}
 import { access, readFile, writeFile, rename, mkdir } from 'node:fs/promises';
 import { constants as fsConstants } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
