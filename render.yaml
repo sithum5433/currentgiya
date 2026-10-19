@@ -27,7 +27,3 @@ services:
       # - key: OPENAI_API_KEY
       #   sync: false
     healthCheckPath: /api/health
-    disk:
-      name: currentgiya-data
-      mountPath: /data
-      sizeGB: 1
