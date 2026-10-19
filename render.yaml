@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: currentgiya
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: "3000"
+      - key: DATA_DIR
+        value: /data
+      - key: TRUST_PROXY
+        value: "1"
+      - key: CLIENT_IP_HEADER
+        value: x-forwarded-for
+      # Optional — add these in the Render dashboard under Environment
+      # - key: VAPID_PUBLIC_KEY
+      #   sync: false
+      # - key: VAPID_PRIVATE_KEY
+      #   sync: false
+      # - key: VAPID_SUBJECT
+      #   sync: false
+      # - key: OPENAI_API_KEY
+      #   sync: false
+    healthCheckPath: /api/health
+    disk:
+      name: currentgiya-data
+      mountPath: /data
+      sizeGB: 1

@@ -1,0 +1,12 @@
+{
+  "id": "/",
+  "name": "CurrentGiya.lk — Outage & Signal Radar",
+  "short_name": "CurrentGiya",
+  "description": "Community reports for power, water and internet interruptions in Sri Lanka.",
+  "lang": "en-LK",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8f7f4",
+  "theme_color": "#f8f7f4"
+}
